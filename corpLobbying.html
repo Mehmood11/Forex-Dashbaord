@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CORP Lobbying and Bills</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/coin.css">
+
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+
+        <nav id="sidebar" class="active">
+            <center>
+              <h5 style="color:#fff" class="showShortForm">TEC</h5>
+              <h5 style="color:#fff" class="nav-lable">Trade Engine Charts</h5>
+            </center>
+            <div class="custom-menu">
+              <button type="button" id="sidebarCollapse" class="btn btn-secondary">
+                <i class="toggle-icon fa"></i>
+                <span class="sr-only">Toggle Menu</span>
+              </button>
+            </div>
+            <ul class="list-unstyled components mb-5 mt-5">
+              <li>
+                <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+      
+      
+              </li>
+              <li class="dropdown-btn">
+                <a href="#">
+                  <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+                  <!-- <span class="fa fa-caret-down"></span> -->
+                </a>
+              </li>
+              <div class="dropdown-container">
+                <li><a href="./forex.html">Currencies</a></li>
+                <li><a href="./index.html">Stock Profile</a></li>
+              </div>
+              <li class="dropdown-btn  active">
+                <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+              </li>
+              <div class="dropdown-container">
+                <li><a href="#">Bank Reports</a></li>
+                <li><a href="./Inst_Insider.html">Whale Analysis</a></li>
+                <li><a href="./governmentTrade.html">Government</a></li>
+                <li class="active"><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+              </div>
+              <li>
+                <a href="./social.html"><span class="fa fa-heart-o"></span> <span class="nav-lable">Social</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center flex-column text-center align-items-center" style="margin-top: 100px;">
+              <!-- <button class="btn text-white border w-auto d-flex justify-content-center align-items-center btn-sm nav-lable"><span class="fa fa-sign-out mr-2"></span> Logout</button> -->
+              <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+                style="border: 1px solid white; border-radius: 4px;  cursor: pointer;">
+                <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+              </div>
+              <div class="footer mt-2">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+      
+              </div>
+            </div>
+          </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="container-fluid md-5" style="height: 100vh; overflow: auto;">
+            <div class="container-fluid">
+                <div class="row px-2">
+                    <div class="col-12 topCorpLobby">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Corp Lobby Top 20+
+                            </div>
+                            <div class="card-body item-body">
+                                <canvas id="topCorpLobby" style="width:100%; height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 mt-5 highestBooking">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Bills with highest booking
+                            </div>
+                            <div class="card-body item-body">
+                                <canvas id="highestBooking" style="width:100%; height: 400px;"></canvas>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/main.js"></script>
+    <script>
+        const topCorpLobby = document.getElementById('topCorpLobby');
+        const highestBooking = document.getElementById('highestBooking');
+        new Chart(topCorpLobby, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [12, 49, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                title: {
+                    display: true,
+                    text: 'Recent Senator Trades'
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+        new Chart(highestBooking, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [12, 209, 39, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [100, 49, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                title: {
+                    display: true,
+                    text: 'Recent Senator Trades'
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+    </script>
+</body>
+
+</html>

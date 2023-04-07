@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #647cac;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: #353e50;
+  border-radius: 8px;
+}
+#content::-webkit-scrollbar {
+  display: none;
+}
+.logo-size {
+  position: relative;
+  width: 30px;
+}
+
+.price-container {
+  width: 100%;
+  position: relative;
+  /* left: 2px; */
+  /* top: 25vh; */
+  overflow: hidden;
+}
+
+.price-box {
+  display: sticky;
+  position: relative;
+  width: auto;
+  /*height: 10rem;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  animation: scrolling 20s linear infinite;
+}
+
+@keyframes scrolling {
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  from {
+    -moz-transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+    transform: translateX(120%);
+  }
+}
+
+.negative-price {
+  color: red;
+}
+.positive-price {
+  color: green;
+}
+
+.currency-id {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-family: "Montserrat";
+}
+.price-styling {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  z-index: 2;
+  font-family: "Montserrat";
+}
+
+.box-styling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.inner-box-styling {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0rem;
+}
+
+.change-styling {
+  font-size: 1rem;
+  z-index: 2;
+  font-family: "Montserrat";
+}
+input,
+input::placeholder,
+input:focus {
+  color: white;
+}
+table tr {
+  color: rgb(249, 249, 249);
+  white-space: nowrap;
+}
+table thead {
+  border-top: none;
+}
+ul li a {
+  border-bottom: none !important;
+}
+ul li.active {
+  background-color: #353e50;
+}
+ul li:hover {
+  background-color: #566073;
+}
+ul li a:hover {
+  background-color: #566073;
+}
+.widget {
+  min-width: unset !important;
+  max-width: unset !important;
+  width: 100% !important;
+}
+.dropdown-container {
+  display: none;
+  float: right;
+  /* background-color: #262626; */
+  padding-left: 14px;
+  white-space: normal;
+  width: 92%;
+}
+.dropdown-container.addStyle {
+  /* width: auto; */
+  z-index: 111;
+  font-size: 11px !important;
+  /* background-color: #54607437; */
+  float: left;
+  /* margin-left: 20px; */
+}
+.dropdown-container.addStyle li {
+  font-size: 10px !important;
+  /* margin-left: 20px; */
+}
+#social-header {
+  display: flex;
+  list-style: none;
+}
+#social-header li {
+  margin-right: 12px;
+  font-size: 8px;
+}
+#social-header li:hover,
+#social-header li a:hover {
+  background-color: transparent !important;
+}
+#social-header li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+}
+#social-header li a i {
+  font-size: 25px;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.fa-chevron-down {
+  font-size: 8px !important;
+}
+.post-input {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid var(--color-border-gray);
+  padding: 10px;
+  border-radius: 8px;
+}
+.post-input i {
+  font-size: 20px;
+  color: white;
+}
+.post-input input {
+  width: 100%;
+  outline: none;
+}
+.thumbs-up,
+.fa-edit {
+  font-size: 24px;
+}
+
+/* /////////////button animation */
+.buttons {
+  border: 0;
+  outline: 0;
+  padding: 1.5rem 2rem;
+  font-size: 4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.uploadButtons {
+  padding: 0.5rem 1rem;
+  /* font-size: 4rem; */
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.uploadButtons:hover,
+.postButton:hover {
+  background-color: rgb(26 30 38) !important;
+}
+.buttons:hover {
+  background-color: #1f242d;
+  transform: scale(1.03);
+}
+.buttons:active,
+.uploadButtons:active,
+.postButton {
+  transform: scale(0.98) !important;
+}
+
+/* hover class */
+.hoverclass:hover {
+  border: 1px solid rgba(243, 238, 238, 0.303) !important;
+}
+#dropdownMenu2:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 737px) {
+  .hideText {
+    font-size: 10px !important;
+  }
+  .thumbs-up,
+.fa-edit {
+  font-size: 12px;
+}
+}

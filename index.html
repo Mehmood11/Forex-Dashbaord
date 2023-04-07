@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Stock Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/coin.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar" class="active">
+      <center>
+        <h5 style="color:#fff" class="showShortForm">TEC</h5>
+        <h5 style="color:#fff" class="nav-lable">Trade Engine Charts</h5>
+      </center>
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-secondary">
+          <i class="toggle-icon fa"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+      </div>
+      <ul class="list-unstyled components mb-5 mt-5">
+        <li>
+          <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+
+
+        </li>
+        <li class="dropdown-btn active">
+          <a href="#">
+            <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+            <!-- <span class="fa fa-caret-down"></span> -->
+          </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="./forex.html">Currencies</a></li>
+          <li class="active"><a href="./index.html">Stock Profile</a></li>
+        </div>
+        <li class="dropdown-btn">
+          <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+        </li>
+        <div class="dropdown-container">
+          <li><a href="#">Bank Reports</a></li>
+          <li><a href="./Inst_Insider.html">Whale Analysis</a></li>
+          <li><a href="./governmentTrade.html">Government</a></li>
+          <li><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+        </div>
+        <li>
+          <a href="./social.html"><span class="fa fa-heart-o"></span> <span class="nav-lable">Social</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+        </li>
+      </ul>
+      <div class="d-flex justify-content-center flex-column text-center align-items-center" style="margin-top: 100px;">
+        <!-- <button class="btn text-white border w-auto d-flex justify-content-center align-items-center btn-sm nav-lable"><span class="fa fa-sign-out mr-2"></span> Logout</button> -->
+        <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+          style="border: 1px solid white; border-radius: 4px;  cursor: pointer;">
+          <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+        </div>
+        <div class="footer mt-2">
+          Copyright &copy;
+          <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="container-fluid md-5" style="max-height: 100vh; overflow: auto;">
+      <!-- <div class="container-fluid"> -->
+      <nav class="navbar navbar-expand-lg homepage-banner">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async>
+              {
+                "symbols": [
+                  {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500"
+                  },
+                  {
+                    "proName": "FOREXCOM:NSXUSD",
+                    "title": "US 100"
+                  },
+                  {
+                    "proName": "FX_IDC:EURUSD",
+                    "title": "EUR/USD"
+                  },
+                  {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                  },
+                  {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                  }
+                ],
+                  "showSymbolLogo": true,
+                    "colorTheme": "dark",
+                      "isTransparent": true,
+                        "displayMode": "adaptive",
+                          "locale": "en"
+              }
+            </script>
+        </div>
+        <input type="text" class="p-1"
+          style="background-color: transparent; outline: none; border-radius: 6px; border: 1px solid gray ; margin-left: 3px; margin-top: -4px;"
+          placeholder="Search" />
+
+        <!-- TradingView Widget END -->
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-xs-12 col-md-4 tv_charts">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Tv Chart
+              </div>
+              <div class="card-body item-body">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/AAPL/"
+                      rel="noopener" target="_blank"><span class="blue-text">AAPL stock price</span></a> by TradingView
+                  </div>
+                  <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+                      {
+                        "symbols": [
+                          [
+                            "Apple",
+                            "AAPL|1D"
+                          ]
+                        ],
+                          "chartOnly": false,
+                            "width": "500",
+                              "height": "300",
+                                "locale": "en",
+                                  "colorTheme": "dark",
+                                    "autosize": false,
+                                      "showVolume": false,
+                                        "showMA": false,
+                                          "hideDateRanges": false,
+                                            "hideMarketStatus": false,
+                                              "hideSymbolLogo": false,
+                                                "scalePosition": "right",
+                                                  "scaleMode": "Normal",
+                                                    "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+                                                      "fontSize": "7",
+                                                        "noTimeScale": false,
+                                                          "valuesTracking": "1",
+                                                            "changeMode": "price-and-percent",
+                                                              "chartType": "line",
+                                                                "backgroundColor": "rgba(19, 23, 34, 0)"
+                      }
+                    </script>
+                </div>
+
+                <!-- TradingView Widget END -->
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-8 tv_grands">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Tv Grands
+              </div>
+              <div class="card-body item-body">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                  <div class="tradingview-widget-container__widget"></div>
+                  <div class="tradingview-widget-copyright"><a
+                      href="https://www.tradingview.com/symbols/NASDAQ-AAPL/financials-overview/" rel="noopener"
+                      target="_blank"><span class="blue-text">AAPL fundamentals</span></a> by TradingView</div>
+                  <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-financials.js" async>
+                      {
+                        "colorTheme": "dark",
+                          "isTransparent": true,
+                            "largeChartUrl": "",
+                              "displayMode": "regular",
+                                "width": "100%",
+                                  "height": "100%",
+                                    "symbol": "NASDAQ:AAPL",
+                                      "locale": "en"
+                      }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row  mb-2">
+          <div class="col-md-4  pr-0 Institutional_active_positions">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Institutional Active Positions
+              </div>
+              <div class="card-body item-body">
+                <canvas id="myChart" style="width:100%;;"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4  pr-0 Institutional_NewSold-Out_positions">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Institutional New and Sold-Out Positions
+              </div>
+              <div class="card-body item-body">
+                <canvas id="myChart2" style="width:100%;"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 top_Instituional_Holders">
+            <div class="card card-class" style="max-height: 650px; overflow-x: auto;">
+              <div class="card-header item-header">
+                Top institutional holders
+              </div>
+              <div class="card-body item-body">
+                <table class="table table-responsive">
+                  <thead>
+                    <tr>
+                      <th>Owner Name</th>
+                      <th>Date</th>
+                      <th>Shares Held</th>
+                      <th>Shares Change</th>
+                      <th>Share Percentage</th>
+                      <th>Share Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Generate random data for 5 rows -->
+
+                    <tr>
+                      <td>Owner 5</td>
+                      <td>2022-03-14</td>
+                      <td>6938</td>
+                      <td>-89</td>
+                      <td>0.03</td>
+                      <td>$79,291.00</td>
+                    </tr>
+                    <tr>
+                      <td>Owner 4</td>
+                      <td>2022-03-15</td>
+                      <td>3621</td>
+                      <td>22</td>
+                      <td>0.07</td>
+                      <td>$43,387.00</td>
+                    </tr>
+                    <tr>
+                      <td>Owner 5</td>
+                      <td>2022-03-14</td>
+                      <td>6938</td>
+                      <td>-89</td>
+                      <td>0.03</td>
+                      <td>$79,291.00</td>
+                    </tr>
+                    <tr>
+                      <td>Owner 5</td>
+                      <td>2022-03-14</td>
+                      <td>6938</td>
+                      <td>-89</td>
+                      <td>0.03</td>
+                      <td>$79,291.00</td>
+                    </tr>
+                    <tr>
+                      <td>Owner 4</td>
+                      <td>2022-03-15</td>
+                      <td>3621</td>
+                      <td>22</td>
+                      <td>0.07</td>
+                      <td>$43,387.00</td>
+                    </tr>
+                    <tr>
+                      <td>Owner 5</td>
+                      <td>2022-03-14</td>
+                      <td>6938</td>
+                      <td>-89</td>
+                      <td>0.03</td>
+                      <td>$79,291.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-xs-12 col-md-4 pr-0">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Insider chart
+              </div>
+              <div class="card-body item-body">
+                <canvas id="myChart3" style="width:100%; height: 300px;"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class=" col-xs-12  col-md-8 ">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Insider Tracker
+              </div>
+              <div class="card-body item-body">
+                <canvas id="myChart4" style="width:100%; height: 300px;"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row  mb-2">
+          <div class="col-md-12 corporateLobbying">
+            <div class="card card-class">
+              <div class="card-header item-header">
+                Corporate lobbying
+              </div>
+              <div class="card-body item-body">
+                <div class="d-flex align-items-start">
+                  <div class="tab-content" id="v-pills-tabContent" style="width: 100%;">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                      aria-labelledby="v-pills-home-tab">
+                      <table class="table" style="width: 100%;">
+                        <thead>
+                          <tr>
+                            <th>Questions</th>
+                            <th>Price</th>
+                            <th>Practices</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Generate random data for 5 rows -->
+                          <tr>
+                            <td>Q 01</td>
+                            <td>$30</td>
+                            <td>This is dummy text</td>
+                          </tr>
+                          <tr>
+                            <td>Q 02</td>
+                            <td>$30</td>
+                            <td>This is dummy text</td>
+                          </tr>
+                          <tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                      aria-labelledby="v-pills-profile-tab">...</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+
+    const ctx = document.getElementById('myChart');
+    const ctx2 = document.getElementById('myChart2');
+
+    var xValuesdn = ["Italy", "France", "Spain", "USA", "Argentina"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+
+    new Chart(ctx, {
+      type: "doughnut",
+      data: {
+        labels: xValuesdn,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+        }
+      }
+    });
+
+    var xValuesdn = ["Italy", "France", "Argentina"];
+    var yValues = [20, 49, 15, 24, 50];
+
+    var barColors = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+
+    new Chart(ctx2, {
+      type: "doughnut",
+      data: {
+        labels: xValuesdn,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2018"
+        }
+      }
+    });
+
+    const ctx3 = document.getElementById('myChart3').getContext("2d");
+
+    var data = {
+      labels: ["Label 1", "Label 2", "Label 3", "Label 4"],
+      datasets: [{
+        label: "Data",
+        data: [10, 20, 35, 20],
+        backgroundColor: "blue",
+        borderColor: "black",
+        borderWidth: 1
+      }]
+    };
+
+    // Set up the options
+    var options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Insider Chart'
+        }
+      },
+      scales: {
+        x: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }],
+        y: [{
+          ticks: {
+            reverse: true, // reverse the y-axis values
+            beginAtZero: true
+          }
+        }]
+      }
+    };
+
+    // Create the chart
+    var chart = new Chart(ctx3, {
+      type: "bar",
+      data: data,
+      options: options
+    });
+
+
+    const ctx4 = document.getElementById('myChart4');
+
+    var xValues = [];
+    var yValues = [];
+    generateData("Math.sin(x)", 0, 10, 0.5);
+
+    new Chart(ctx4, {
+      type: "line",
+      data: {
+        labels: ['Label 1', 'Label 2', 'Label 3', 'Label 4'],
+        datasets: [{
+          label: 'Label 1',
+          fill: false,
+          pointRadius: 5,
+          borderColor: "rgba(0,0,255,0.5)",
+          data: [2, 10, 4, 17],
+          cubicInterpolationMode: 'monotone',
+        }]
+      },
+      options: {
+        legend: { display: false },
+        title: {
+          display: true,
+          text: "y = sin(x)",
+          fontSize: 16
+        }
+      }
+    });
+    function generateData(value, i1, i2, step = 1) {
+      for (let x = i1; x <= i2; x += step) {
+        yValues.push(eval(value));
+        xValues.push(x);
+      }
+    }
+  </script>
+
+  <script src="js/jquery.min.js"></script>
+  <!-- <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

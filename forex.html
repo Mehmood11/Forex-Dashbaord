@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Forex</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/coin.css">
+
+</head>
+
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar" class="active">
+            <center>
+                <h5 style="color:#fff" class="showShortForm">TEC</h5>
+                <h5 style="color:#fff" class="nav-lable">Trade Engine Charts</h5>
+            </center>
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-secondary">
+                    <i class="toggle-icon fa"></i>
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+            </div>
+            <ul class="list-unstyled components mb-5 mt-5">
+                <li>
+                    <a href="#"><span class="fa fa-home"></span><span class="nav-lable">Dashboard</span> </a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-line-chart"></span> <span class="nav-lable">Tradings</span></a>
+
+
+                </li>
+                <li class="dropdown-btn active">
+                    <a href="#">
+                        <span class="fa fa-bar-chart"></span> <span class="nav-lable">Analytics</span>
+                        <!-- <span class="fa fa-caret-down"></span> -->
+                    </a>
+                </li>
+                <div class="dropdown-container">
+                    <li class="active"><a href="./forex.html">Currencies</a></li>
+                    <li><a href="./index.html">Stock Profile</a></li>
+                </div>
+                <li class="dropdown-btn">
+                    <a href="#"><span class="fa fa-lock"></span><span class="nav-lable">Research</span> </a>
+                </li>
+                <div class="dropdown-container">
+                    <li><a href="#">Bank Reports</a></li>
+                    <li><a href="./Inst_Insider.html">Whale Analysis</a></li>
+                    <li><a href="./governmentTrade.html">Government</a></li>
+                    <li><a href="./corpLobbying.html">Lobbying & Bills</a></li>
+                </div>
+                <li>
+                    <a href="./social.html"><span class="fa fa-heart-o"></span> <span class="nav-lable">Social</span></a>
+                </li>
+                <li>
+                    <a href="#"><span class="fa fa-cog"></span> <span class="nav-lable">Setting</span></a>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center flex-column text-center align-items-center"
+                style="margin-top: 100px;">
+                <!-- <button class="btn text-white border w-auto d-flex justify-content-center align-items-center btn-sm nav-lable"><span class="fa fa-sign-out mr-2"></span> Logout</button> -->
+                <div class="d-flex justify-content-center flex-row text-center align-items-center px-2 py-1 ml-3"
+                    style="border: 1px solid white; border-radius: 4px;  cursor: pointer;">
+                    <span class="fa fa-sign-out mr-2"></span> <span class="nav-lable">Logout</span>
+                </div>
+                <div class="footer mt-2">
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear())</script> All rights reserved</a>
+
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Page Content  -->
+        <div id="content" class="container-fluid md-5" style="height: 100vh; overflow: auto;">
+            <nav class="navbar navbar-expand-lg homepage-banner">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container">
+                    <div class="tradingview-widget-container__widget"></div>
+                    <script type="text/javascript"
+                        src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                            {
+                                "symbols": [
+                                    {
+                                        "proName": "FOREXCOM:SPXUSD",
+                                        "title": "S&P 500"
+                                    },
+                                    {
+                                        "proName": "FOREXCOM:NSXUSD",
+                                        "title": "US 100"
+                                    },
+                                    {
+                                        "proName": "FX_IDC:EURUSD",
+                                        "title": "EUR/USD"
+                                    },
+                                    {
+                                        "proName": "BITSTAMP:BTCUSD",
+                                        "title": "Bitcoin"
+                                    },
+                                    {
+                                        "proName": "BITSTAMP:ETHUSD",
+                                        "title": "Ethereum"
+                                    }
+                                ],
+                                    "showSymbolLogo": true,
+                                        "colorTheme": "dark",
+                                            "isTransparent": true,
+                                                "displayMode": "adaptive",
+                                                    "locale": "en"
+                            }
+                        </script>
+                </div>
+                <input type="text" class="p-1"
+                    style="background-color: transparent; outline: none; border-radius: 6px; border: 1px solid gray ; margin-left: 3px; margin-top: -4px;"
+                    placeholder="Search" />
+
+                <!-- TradingView Widget END -->
+            </nav>
+            <div class="container-fluid">
+                <div class="row px-2">
+                    <div class="col-12 main-chart" style="height: 500px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                            </div>
+                            <div class="card-body item-body">
+                               <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_270ba"  style="height: 400px;"></div>
+    <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">AAPL stock chart</span></a> by TradingView</div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+    new TradingView.widget(
+    {
+        "height": 450,
+    "autosize": true,
+    "symbol": "NASDAQ:AAPL",
+    "interval": "D",
+    "timezone": "Etc/UTC",
+    "theme": "dark",
+    "style": "1",
+    "locale": "en",
+    "toolbar_bg": "#f1f3f6",
+    "enable_publishing": false,
+    "allow_symbol_change": true,
+    "container_id": "tradingview_270ba"
+  }
+    );
+    </script>
+  </div>
+  <!-- TradingView Widget END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xs-12 col-md-3 dealerIndex" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Dealer Index
+                            </div>
+                            <div class="card-body item-body">
+
+                                <canvas id="dealerIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3 assetManagerIndex" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Asset Manager Index
+                            </div>
+                            <div class="card-body item-body">
+
+                                <canvas id="assetManagerIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3 leverageFundIndex" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Leveraged Funds Index
+                            </div>
+                            <div class="card-body item-body">
+
+                                <canvas id="leverageFundIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-3 nonCommercialIndex" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Non-Commercial Index
+                            </div>
+                            <div class="card-body item-body">
+
+                                <canvas id="nonCommercialIndex" style="width:100%; height: 200px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-2">
+                    <div class="col-xs-12 col-md-4 interestRate" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Interest Rate
+                            </div>
+                            <div class="card-body item-body">
+
+                                <canvas id="interestRate" style="width:100%; height: 240px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 inflationRate" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Infllation rate
+                            </div>
+                            <div class="card-body item-body">
+                                <canvas id="inflationRate" style="width:100%; height: 240px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-4 unemploymentRate" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Unemployment rate
+
+                            </div>
+                            <div class="card-body item-body">
+                                <canvas id="unemploymentRate" style="width:100%; height: 240px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row p-2">
+                    <div class="col-xs-12 col-md-6" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                Calender
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- TradingView Widget BEGIN -->
+                                <div class="tradingview-widget-container">
+                                    <div class="tradingview-widget-container__widget"></div>
+                                    <div class="tradingview-widget-copyright"><a
+                                            href="https://www.tradingview.com/markets/" rel="noopener"
+                                            target="_blank"><span class="blue-text">Market summary</span></a> by
+                                        TradingView</div>
+                                    <script type="text/javascript"
+                                        src="https://s3.tradingview.com/external-embedding/embed-widget-market-quotes.js"
+                                        async>
+                                            {
+                                                "width": 620,
+                                                    "height": 450,
+                                                        "symbolsGroups": [
+                                                            {
+                                                                "name": "Indices",
+                                                                "originalName": "Indices",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "FOREXCOM:SPXUSD",
+                                                                        "displayName": "S&P 500"
+                                                                    },
+                                                                    {
+                                                                        "name": "FOREXCOM:NSXUSD",
+                                                                        "displayName": "US 100"
+                                                                    },
+                                                                    {
+                                                                        "name": "FOREXCOM:DJI",
+                                                                        "displayName": "Dow 30"
+                                                                    },
+                                                                    {
+                                                                        "name": "INDEX:NKY",
+                                                                        "displayName": "Nikkei 225"
+                                                                    },
+                                                                    {
+                                                                        "name": "INDEX:DEU40",
+                                                                        "displayName": "DAX Index"
+                                                                    },
+                                                                    {
+                                                                        "name": "FOREXCOM:UKXGBP",
+                                                                        "displayName": "UK 100"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "Futures",
+                                                                "originalName": "Futures",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "CME_MINI:ES1!",
+                                                                        "displayName": "S&P 500"
+                                                                    },
+                                                                    {
+                                                                        "name": "CME:6E1!",
+                                                                        "displayName": "Euro"
+                                                                    },
+                                                                    {
+                                                                        "name": "COMEX:GC1!",
+                                                                        "displayName": "Gold"
+                                                                    },
+                                                                    {
+                                                                        "name": "NYMEX:CL1!",
+                                                                        "displayName": "Crude Oil"
+                                                                    },
+                                                                    {
+                                                                        "name": "NYMEX:NG1!",
+                                                                        "displayName": "Natural Gas"
+                                                                    },
+                                                                    {
+                                                                        "name": "CBOT:ZC1!",
+                                                                        "displayName": "Corn"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "Bonds",
+                                                                "originalName": "Bonds",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "CME:GE1!",
+                                                                        "displayName": "Eurodollar"
+                                                                    },
+                                                                    {
+                                                                        "name": "CBOT:ZB1!",
+                                                                        "displayName": "T-Bond"
+                                                                    },
+                                                                    {
+                                                                        "name": "CBOT:UB1!",
+                                                                        "displayName": "Ultra T-Bond"
+                                                                    },
+                                                                    {
+                                                                        "name": "EUREX:FGBL1!",
+                                                                        "displayName": "Euro Bund"
+                                                                    },
+                                                                    {
+                                                                        "name": "EUREX:FBTP1!",
+                                                                        "displayName": "Euro BTP"
+                                                                    },
+                                                                    {
+                                                                        "name": "EUREX:FGBM1!",
+                                                                        "displayName": "Euro BOBL"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "name": "Forex",
+                                                                "originalName": "Forex",
+                                                                "symbols": [
+                                                                    {
+                                                                        "name": "FX:EURUSD",
+                                                                        "displayName": "EUR/USD"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:GBPUSD",
+                                                                        "displayName": "GBP/USD"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:USDJPY",
+                                                                        "displayName": "USD/JPY"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:USDCHF",
+                                                                        "displayName": "USD/CHF"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:AUDUSD",
+                                                                        "displayName": "AUD/USD"
+                                                                    },
+                                                                    {
+                                                                        "name": "FX:USDCAD",
+                                                                        "displayName": "USD/CAD"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                            "showSymbolLogo": true,
+                                                                "colorTheme": "dark",
+                                                                    "isTransparent": false,
+                                                                        "locale": "en"
+                                            }
+                                        </script>
+                                </div>
+                                <!-- TradingView Widget END -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6" style="min-height: 140px;">
+                        <div class="card card-class">
+                            <div class="card-header item-header">
+                                News
+                            </div>
+                            <div class="card-body item-body">
+                                <!-- Live Rates widget by Forextime.com -->
+                                <script type="text/javascript"
+                                    src="//www.forextime.com/widget.js?type=live-rates&theme=dark&h=315&w=100&pairs=eurusdusdjpyeurgbpgbpusdeurchf&">
+                                    </script>
+                                <!-- <canvas id="main-chart" style="width:100%; height: 400px;"></canvas> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/main.js"></script>
+    <script>
+        const dealerIndex = document.getElementById('dealerIndex');
+        const assetManagerIndex = document.getElementById('assetManagerIndex');
+        const leverageFundIndex = document.getElementById('leverageFundIndex');
+        const nonCommercialIndex = document.getElementById('nonCommercialIndex');
+        const interestRate = document.getElementById('interestRate');
+        const inflationRate = document.getElementById('inflationRate');
+        const unemploymentRate = document.getElementById('unemploymentRate');
+
+    
+        ///// dealerIndex
+        new Chart(dealerIndex, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [12, 49, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+        ///// assetManagerIndex
+        new Chart(assetManagerIndex, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [12, 1, 3, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [12, 19, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+        ///// leverageFundIndex
+        new Chart(leverageFundIndex, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [23, 1, 13, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [17, 29, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+        ///// nonCommercialIndex
+        new Chart(nonCommercialIndex, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [23, 1, 13, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [17, 29, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+        ///// interestRate
+        new Chart(interestRate, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [23, 1, 13, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [17, 29, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+        ///// inflationRate
+        new Chart(inflationRate, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [23, 1, 13, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [17, 29, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+        ///// unemploymentRate
+        new Chart(unemploymentRate, {
+            type: 'bar',
+            data: {
+                labels: ['label1', 'labe2', 'label3', 'label4',],
+                datasets: [{
+                    label: 'Dataset 1',
+                    data: [23, 1, 13, 5],
+                    backgroundColor: "rgba(0,0,25,0.5)",
+                    borderWidth: 1
+                }, {
+                    label: 'Dataset 2',
+                    data: [17, 29, 30, 5],
+                    backgroundColor: "rgba(0,0,255,0.5)",
+                    borderWidth: -2
+                }]
+            },
+
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                barPercentage: 0.5, // Set the width of the bars to 50% of the available space
+                categoryPercentage: 0.7,
+
+            }
+        });
+
+    </script>
+</body>
+
+</html>
