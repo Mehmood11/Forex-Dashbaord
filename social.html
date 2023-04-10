@@ -117,10 +117,12 @@
             </div>
             <div class="row m-0 mt-2 justify-content-around align-items-start w-100">
                 <div class="col-xs-12 col-lg-8">
-                    <div class="row rounded p-4 hoverclass"
-                        style="background-color: #1F242D; border: 1px solid var(--color-border-gray);">
+                    <div class="row p-4 hoverclass"
+                        style="background-color: #1F242D; border: 1px solid var(--color-border-gray); border-radius: 8px">
                         <div class="col-12 p-0">
-                            <form action="">
+                            <form action="" class="form-div w-100">
+                                <img src="./images/man.png" class="mr-3"
+                                    style="height: 50px; width: 50px; object-fit: cover; border-radius: 50%;" />
                                 <div class="post-input">
                                     <i class="fa fa-edit"></i><input placeholder="Start a Post"
                                         class="px-4 bg-transparent border-0" />
@@ -130,31 +132,39 @@
                                 <div class="col-xs-12 col-sm-6 col-lg-3 ">
                                     <div
                                         class="uploadButtons d-flex justify-content-start align-items-center flex-column flex-md-row  text-center text-white">
-                                        <i class="fa fa-image"></i>
-                                        <h6 class="mt-2 ml-0 ml-md-2">Photos</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#378FE9" class="mercado-match" width="24" height="24" focusable="false">
+                                            <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z"></path>
+                                          </svg>
+                                        <h6 class="mt-2 ml-0 ml-md-2 text-secondary" style="color: #B4B4B4;">Photos</h6>
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-lg-3">
                                     <div
                                         class="uploadButtons d-flex justify-content-start align-items-center flex-column flex-md-row  text-center text-white">
-                                        <i class='fa fa-video-camera'></i>
-                                        <h6 class="mt-2 ml-0 ml-md-2">Video</h6>
-                                    </div>
-
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-lg-3">
-                                    <div
-                                        class="uploadButtons d-flex justify-content-start align-items-center flex-column flex-md-row  text-center text-white">
-                                        <i class="fa fa-calendar"></i>
-                                        <h6 class="mt-2 ml-0 ml-md-2">Event</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#5F9B41" class="mercado-match" width="24" height="24" focusable="false">
+                                            <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z"></path>
+                                          </svg>
+                                        <h6 class="mt-2 ml-0 ml-md-2 text-secondary" style="color: #B4B4B4;">Video</h6>
                                     </div>
 
                                 </div>
                                 <div class="col-xs-12 col-sm-6 col-lg-3">
                                     <div
                                         class="uploadButtons d-flex justify-content-start align-items-center flex-column flex-md-row  text-center text-white">
-                                        <i class="fa fa-book"></i>
-                                        <h6 class="mt-2 ml-0 ml-md-2">Article</h6>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#C37D16" class="mercado-match" width="24" height="24" focusable="false">
+                                            <path d="M3 3v15a3 3 0 003 3h12a3 3 0 003-3V3zm13 1.75A1.25 1.25 0 1114.75 6 1.25 1.25 0 0116 4.75zm-8 0A1.25 1.25 0 116.75 6 1.25 1.25 0 018 4.75zM19 18a1 1 0 01-1 1H6a1 1 0 01-1-1V9h14zm-5.9-3a1 1 0 00-1-1H12a3.12 3.12 0 00-1 .2l-1-.2v-3h3.9v1H11v1.15a3.7 3.7 0 011.05-.15 1.89 1.89 0 012 1.78V15a1.92 1.92 0 01-1.84 2H12a1.88 1.88 0 01-2-1.75 1 1 0 010-.25h1a.89.89 0 001 1h.1a.94.94 0 001-.88z"></path>
+                                          </svg>
+                                        <h6 class="mt-2 ml-0 ml-md-2 text-secondary" style="color: #B4B4B4;">Event</h6>
+                                    </div>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-lg-3">
+                                    <div
+                                        class="uploadButtons d-flex justify-content-start align-items-center flex-column flex-md-row  text-center text-white">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#E16745" class="mercado-match" width="24" height="24" focusable="false">
+                                            <path d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z"></path>
+                                          </svg>
+                                        <h6 class="mt-2 ml-0 ml-md-2 text-secondary" style="color: #B4B4B4;">Article</h6>
                                     </div>
 
                                 </div>
@@ -164,6 +174,35 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row mt-3 d-flex justify-content-between align-items-center">
+                        <!-- <div style="width: 86%; border: 1px solid rgba(128, 128, 128, 0.308);"></div> -->
+                        <div class="w-100 d-flex justify-content-center align-items-center">
+                            
+                            <div class="w-100 d-flex justify-content-end align-items-center"
+                                style="font-size: 12px; flex-wrap: nowrap;">
+                                <hr class="flex-grow-1" style="border: 0;display: block;
+                           height: 2px;
+                           width: 60%;
+                           padding: 0;
+                           border-color: rgba(168, 165, 165, 0.458);
+                           border-top: 1px solid rgba(170, 167, 167, 0.604);">
+                                <span style="flex-wrap: nowrap !important;" class="ml-3">Sorted by:</span>
+                                
+                            </div>
+                            <div class="d-flex dropdown-menu-left ml-1">
+                                <span class="ml-1 text-light d-flex justify-content-center align-items-center" id="dropdownMenu3" data-toggle="dropdown" aria-haspopup="true" style="font-size: 12px; cursor: pointer;"
+                                aria-expanded="false">
+                                Top <i class="fa fa-chevron-down ml-1"></i></span>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
+                                    <button class="dropdown-item" type="button">Save</button>
+                                    <button class="dropdown-item" type="button">Copy Link</button>
+                                    <button class="dropdown-item" type="button">Action</button>
+
+                                </div>
+                            </div>
+                        </div>
+                       
                     </div>
                     <div class="row mt-5">
                         <div class="col-xs-12 col-sm-6 col-lg-3 ">
@@ -244,8 +283,8 @@
                                 class="col-xs-12 col-sm-6 d-flex justify-content-end align-items-start align-items-sm-start p-0 flex-row ">
                                 <div
                                     class="d-flex justify-content-center align-items-center text-white text-center mr-3">
-                                    <span class="mt-2 mr-2 hideText">34</span> <i class="fa fa-thumbs-up thumbs-up"></i> <span
-                                        class="mt-2 ml-1 hideText">Likes</span>
+                                    <span class="mt-2 mr-2 hideText">34</span> <i class="fa fa-thumbs-up thumbs-up"></i>
+                                    <span class="mt-2 ml-1 hideText">Likes</span>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center text-white text-center">
                                     <i class="fa fa-edit"></i><span class="mt-2 ml-1 hideText">34</span> <span
@@ -285,7 +324,7 @@
                                 </div>
 
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="row rounded pt-5 pr-3 pr-sm-5 pl-3 pl-sm-5 pb-2 mt-5"
@@ -334,8 +373,8 @@
                                 class="col-xs-12 col-sm-6 d-flex justify-content-end align-items-start align-items-sm-start p-0 flex-row ">
                                 <div
                                     class="d-flex justify-content-center align-items-center text-white text-center mr-3">
-                                    <span class="mt-2 mr-2 hideText">34</span> <i class="fa fa-thumbs-up thumbs-up"></i> <span
-                                        class="mt-2 ml-1 hideText">Likes</span>
+                                    <span class="mt-2 mr-2 hideText">34</span> <i class="fa fa-thumbs-up thumbs-up"></i>
+                                    <span class="mt-2 ml-1 hideText">Likes</span>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center text-white text-center">
                                     <i class="fa fa-edit"></i><span class="mt-2 ml-1 hideText">34</span> <span
@@ -375,7 +414,7 @@
                                 </div>
 
                             </div>
-                           
+
                         </div>
                     </div>
                     <div class="row rounded pt-5 pr-3 pr-sm-5 pl-3 pl-sm-5 pb-2 mt-5"
@@ -424,8 +463,8 @@
                                 class="col-xs-12 col-sm-6 d-flex justify-content-end align-items-start align-items-sm-start p-0 flex-row ">
                                 <div
                                     class="d-flex justify-content-center align-items-center text-white text-center mr-3">
-                                    <span class="mt-2 mr-2 hideText">34</span> <i class="fa fa-thumbs-up thumbs-up"></i> <span
-                                        class="mt-2 ml-1 hideText">Likes</span>
+                                    <span class="mt-2 mr-2 hideText">34</span> <i class="fa fa-thumbs-up thumbs-up"></i>
+                                    <span class="mt-2 ml-1 hideText">Likes</span>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center text-white text-center">
                                     <i class="fa fa-edit"></i><span class="mt-2 ml-1 hideText">34</span> <span
@@ -465,7 +504,7 @@
                                 </div>
 
                             </div>
-                           
+
                         </div>
                     </div>
                 </div>
